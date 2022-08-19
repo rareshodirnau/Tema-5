@@ -10,47 +10,6 @@ function wpr_add_style()
 }
 add_action('wp_enqueue_scripts', 'wpr_add_style');
 
-// Add custom engineers templates
-function include_template_engineers($template)
-{
-    $themedir = dirname(__FILE__);
-
-    if (is_post_type_archive( 'engineers' )) {
-        $templatefilename = 'archive-engineers.php';
-        $template = $themedir . '/templates/' . $templatefilename;
-        return $template;
-    }
-
-    if ('engineers' == get_post_type()) {
-        $templatefilename = 'single-engineers.php';
-        $template = $themedir . '/templates/' . $templatefilename;
-        return $template;
-    }
-    return $template;
-
-    if ('software' == get_post_type()) {
-        $templatefilename = 'single-software.php';
-        $template = $themedir . '/templates/' . $templatefilename;
-        return $template;
-    }
-    return $template;
-}
-add_filter('template_include', 'include_template_engineers');
-
-// Add custom software templates
-function include_template_software($template)
-{
-    $themedir = dirname(__FILE__);
-
-    if ('software' == get_post_type()) {
-        $templatefilename = 'single-software.php';
-        $template = $themedir . '/templates/' . $templatefilename;
-        return $template;
-    }
-    return $template;
-}
-add_filter('template_include', 'include_template_software');
-
 // Create CPT Engineers
 function engineers()
 {
