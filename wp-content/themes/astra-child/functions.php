@@ -65,7 +65,7 @@ function engineers()
         ],
         'hierarchical' => true,
         'public' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'menu_icon' => 'dashicons-admin-users',
         'supports' => ['title', 'editor', 'thumbnail', 'custom-fields'],
         'show_in_rest' => true,
