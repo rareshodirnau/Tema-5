@@ -48,7 +48,7 @@ function software()
         ],
         'hierarchical' => true,
         'public' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'menu_icon' => 'dashicons-analytics',
         'supports' => ['title', 'editor', 'thumbnail', 'custom-fields'],
         'show_in_rest' => true,
